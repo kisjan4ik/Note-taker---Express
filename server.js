@@ -13,21 +13,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-// HTML routes://
-
-app.get("/notes", function (req, res) {
-  res.sendFile(path.join(__dirname, "./public/notes.html"));
-});
-
-// If no matching route is found default to home
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./public/index.html"));
-});
 
 
 //API routes://
 app.get("/api/notes", (req, res) => {
-  let notesContent = JSON.parse(fs.readFile("db/db.json", "utf8"));
+  let notesContent = JSON.parse(fs.readFileSync("db/db.json"));
   res.json(notesContent);
   console.log(notesContent);
 
@@ -45,11 +35,26 @@ app.post("/api/notes", (req, res) => {
 })
 
 app.delete("/api/notes/:id", (req, res) => {
+  let notesContent = JSON.parse(fs.readFileSync("db/db.json"));
+  const cleanedNotes = notesContent.filter(function(noteObj) {
+    return noteObj.id !== req.params.id;
+  });
+ fs.writeFileSync("db/db.json", JSON.stringify(cleanedNotes));
+
+ res.json(cleanedNotes)
 
 })
 
+// HTML routes://
 
+app.get("/notes", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
 
+// If no matching route is found default to home
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
 
 
 app.listen(PORT, () => {
