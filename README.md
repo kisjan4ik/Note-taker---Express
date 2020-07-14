@@ -1,7 +1,5 @@
 # Note-taker---Express
 
-
-
 ![Github license](https://img.shields.io/badge/no-license-green.svg)
 
   ## Description
