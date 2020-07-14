@@ -4,7 +4,7 @@
 
   ## Description
 
-  This app helps to generate employee log with Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person..
+  The application can be used to write, save, and delete notes. This application uses an express backend and save and retrieve note data from a JSON file.
 
   
   ## Table of Contents:
@@ -19,11 +19,12 @@
   ## Installation
 
   To correctly use this project you needed to install:
-  npm i inquirer
+  npm i express,
+  npm install uuid
 
   ## Usage
 
-   The application prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.
+  A user can write and save notes and isable to delete/view notes that were written before in order to organize thoughts, tasks and plans.
 
   ## License
   
@@ -35,21 +36,32 @@
 
   ## Tests
 
- The tests are provided in test folder and the screenshot of running the tests is presented below
+ The tests are to be added.
 
   ## Screenshots
 
-### Input information about team members:
-![Screenshot_1](https://user-images.githubusercontent.com/63433561/87046932-cff7d600-c1c7-11ea-9cf0-9ba0f4cc50c3.PNG)
+### Initial page:
+![Note_taker_1](https://user-images.githubusercontent.com/63433561/87372468-97545580-c555-11ea-8516-0a89512a77a1.PNG)
 
-### Successfully generated html document:
-![Screenshot_2](https://user-images.githubusercontent.com/63433561/87046933-d0906c80-c1c7-11ea-9f77-92b38880957d.PNG)
+### Input field for notes:
+![Note_taker_2](https://user-images.githubusercontent.com/63433561/87372469-97ecec00-c555-11ea-85dc-5817ad37a60f.PNG)
 
-### Browser view:
-![Screenshot_3](https://user-images.githubusercontent.com/63433561/87104058-cb153f80-c224-11ea-8d74-f0ec2af9f61e.PNG)
+### Note example:
+![Note_taker_3](https://user-images.githubusercontent.com/63433561/87372470-97ecec00-c555-11ea-81b0-c7c96e1c2770.PNG)
 
-### Tests running:
-![Screenshot_4](https://user-images.githubusercontent.com/63433561/87046937-d1290300-c1c7-11ea-9f9c-77aeab84795b.PNG)
+### Note view:
+![Note_taker_4](https://user-images.githubusercontent.com/63433561/87372471-97ecec00-c555-11ea-896c-40ac134e82ce.PNG)
+
+### Deleted notes:
+![Note_taker_5](https://user-images.githubusercontent.com/63433561/87372472-97ecec00-c555-11ea-9c72-5556e134a79f.PNG)
+
+
+### Links to the application:
+
+ https://github.com/kisjan4ik/Note-taker_Express
+
+ https://mighty-hollows-47713.herokuapp.com/
+
 
 
   © Copyright 2020
